@@ -36,40 +36,40 @@ ram.runtime = "50M"
 [install]
     [install.enable_transport]
     ask.en = "use as server"
-    type = boolean
+    type = "boolean"
     [install.backbone_listen_enabled]
     ask.en = "Use as backbone listener"
-    type = boolean
+    type = "boolean"
     true = "Yes"
     false = "No"
     [install.backbone_listen_on]
     ask.en = "Listen on"
-    type = string
+    type = "string"
     [install.backbone_remote_enabled]
     ask.en = "Use as backbone client"
-    type = boolean
+    type = "boolean"
     true = "Yes"
     false = "No"
     [install.backbone_remote_target]
     ask.en = "Remote target"
-    type = string
+    type = "string"
     
     [install.tcp_server_enabled]
     ask.en = "Use as TCP server"
-    type = boolean
+    type = "boolean"
     true = "Yes"
     false = "No"
     [install.tcp_listen_on]
     ask.en = "Listen on"
-    type = string
+    type = "string"
     [install.tcp_client_enabled]
     ask.en = "Use as TCP client"
-    type = boolean
+    type = "boolean"
     true = "Yes"
     false = "No"
     [install.tcp_client_target_host]
     ask.en = "Target host"
-    type = string
+    type = "string"
         
 [resources]
     [resources.system_user]
