@@ -158,13 +158,13 @@
   
   # Backbone interface : this interface type is currently only supported on Linux and Android.
   
-    [[Backbone Listener]]
+    [[Backbone_Listener]]
       type = BackboneInterface
       enabled = {{ backbone_listen_enabled | default("No", true) }}
       listen_on = {{ backbone_listen_on | default("0.0.0.0", true) }}
       port = {{ port }}
       
-    [[Backbone Remote]]
+    [[Backbone_Remote]]
       type = BackboneInterface
       enabled = {{ backbone_remote_enabled | default("No", true) }}
       remote = {{ backbone_remote_target | default("127.0.0.1", true) }}
@@ -173,7 +173,7 @@
 
   # TCP Server
       
-    [[TCP Server Interface]]
+    [[TCP_Server_Interface]]
       type = TCPServerInterface
       enabled = {{ tcp_server_enabled | default("No", true) }}
       listen_ip = {{ tcp_listen_on | default("0.0.0.0", true) }}
@@ -182,7 +182,7 @@
   # TCP Client
   
       # target_host can be a hostname or an IPv4 or IPv6 address.
-    [[TCP Client Interface]]
+    [[TCP_Client_Interface]]
       type = TCPClientInterface
       enabled = {{ tcp_client_enabled | default("No", true) }}
       target_host = {{ tcp_client_target_host | default("127.0.0.1", true) }}
