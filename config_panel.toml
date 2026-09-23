@@ -1,0 +1,70 @@
+version = "1.0"
+
+[main]
+name.en = "Configuration panel"
+name.fr = "Panneau de configuration"
+services = ["__APP__"]
+
+[main.server]
+name.en = "Use this node as server"
+
+[main.server.enable_transport]
+ask = "Use as server"
+type = boolean
+bind = "reticulum>enable_transport:__INSTALL_DIR__/.__APP__/config"
+
+[main.server.backbone_listen_enabled]
+ask = "Use backbone interface"
+type = boolean
+true = "Yes"
+false = "No"
+bind = "interfaces>Backbone Listener>enabled:__INSTALL_DIR__/.__APP__/config"
+
+[main.server.backbone_listen_on]
+ask = "Backbone listen on"
+type = string
+bind = "interfaces>Backbone Listener>listen_on:__INSTALL_DIR__/.__APP__/config"
+
+[main.server.tcp_server_enabled]
+ask = "Use TCP interface"
+type = boolean
+true = "Yes"
+false = "No"
+bind = "interfaces>TCP Server Interface>enabled:__INSTALL_DIR__/.__APP__/config"
+
+[main.server.tcp_listen_on]
+ask = "TCP listen on"
+type = string
+bind = "interfaces>Backbone Listener>listen_ip:__INSTALL_DIR__/.__APP__/config"
+
+
+[main.client]
+name = "Use as client"
+
+[main.client.backbone_remote_enabled]
+ask = "Use backbone interface for client"
+type = boolean
+true = "Yes"
+false = "No"
+bind = "interfaces>Backbone Remote>enabled:__INSTALL_DIR__/.__APP__/config"
+
+[main.client.backbone_remote_target]
+ask = "Backbone remote target"
+type = string
+bind = "interfaces>Backbone Remote>remote:__INSTALL_DIR__/.__APP__/config"
+
+[main.client.tcp_client_enabled]
+ask = "Use TCP interface for client"
+type = boolean
+true = "Yes"
+false = "No"
+bind = "interfaces>TCP Client Interface>enabled:__INSTALL_DIR__/.__APP__/config"
+
+[main.client.tcp_client_target_host]
+ask = "TCP listen on"
+type = string
+bind = "interfaces>TCP Client Interface>target_host:__INSTALL_DIR__/.__APP__/config"
+
+
+
+
