@@ -16,8 +16,6 @@ bind = "reticulum>enable_transport:__INSTALL_DIR__/.__APP__/config"
 [main.server.backbone_listen_enabled]
 ask = "Use backbone interface"
 type = "boolean"
-true = "Yes"
-false = "No"
 bind = "interfaces>Backbone Listener>enabled:__INSTALL_DIR__/.__APP__/config"
 
 [main.server.backbone_listen_on]
@@ -44,8 +42,6 @@ name = "Use as client"
 [main.client.backbone_remote_enabled]
 ask = "Use backbone interface for client"
 type = "boolean"
-true = "Yes"
-false = "No"
 bind = "interfaces>Backbone Remote>enabled:__INSTALL_DIR__/.__APP__/config"
 
 [main.client.backbone_remote_target]
@@ -56,8 +52,7 @@ bind = "interfaces>Backbone Remote>remote:__INSTALL_DIR__/.__APP__/config"
 [main.client.tcp_client_enabled]
 ask = "Use TCP interface for client"
 type = "boolean"
-true = "Yes"
-false = "No"
+
 bind = "interfaces>TCP Client Interface>enabled:__INSTALL_DIR__/.__APP__/config"
 
 [main.client.tcp_client_target_host]
