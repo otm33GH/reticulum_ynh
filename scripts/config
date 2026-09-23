@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#=================================================
+# IMPORT GENERIC HELPERS
+#=================================================
+
+source /usr/share/yunohost/helpers
+ynh_abort_if_errors
+
+
+run__open_close_ports() {
+    if [[ "$backbone_listen_enabled" == "1" ]]; then
+        yunohost firewall allow Both "$backbone_port"
+    else
+        yunohost firewall disallow Both "$backbone_port"
+    fi
+
+    if [[ "$tcp_server_enabled" == "1" ]]; then
+        yunohost firewall allow TCP "$tcp_port"
+    else
+        yunohost firewall disallow TCP "$tcp_port"
+    fi
+}
+
+  
+#=================================================
+
+ynh_app_config_run $1
