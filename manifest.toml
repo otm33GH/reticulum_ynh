@@ -85,7 +85,7 @@ ram.runtime = "50M"
     [resources.install_dir]
     
     [resources.ports]
-    port.default = 4242
+    main.default = 4242
     
     [resources.apt]
     packages = "build-essential python3-venv"
