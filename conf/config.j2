@@ -168,8 +168,7 @@
       type = BackboneInterface
       enabled = {{ backbone_remote_enabled | default("No", true) }}
       remote = {{ backbone_remote_target | default("127.0.0.1", true) }}
-      target_port = {{ port }}
-          
+      target_port = {{ backbone_remote_target_port | default("4242", true) }}          
 
   # TCP Server
       
@@ -186,5 +185,4 @@
       type = TCPClientInterface
       enabled = {{ tcp_client_enabled | default("No", true) }}
       target_host = {{ tcp_client_target_host | default("127.0.0.1", true) }}
-      target_port = {{ port }}
-  
+      target_port = {{ tcp_client_target_port | default("4242", true) }}  
