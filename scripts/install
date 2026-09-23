@@ -37,9 +37,9 @@ ynh_script_progression "Starting $app's systemd service..."
 ynh_systemctl --service="$app" --action="start"
 yunohost firewall allow TCP "$port"
 
-#pushd $install_dir
-#    identity=$(ynh_exec_as_app rnsh -p 2>&1 | grep '^Identity')
-#popd
+pushd $install_dir
+    identity=$(ynh_exec_as_app "$install_dir/venv/bin/rnsh" -p 2>&1 | grep '^Identity')
+popd
 
 #=================================================
 # END OF SCRIPT
