@@ -66,5 +66,5 @@ bind = "interfaces>TCP_Client_Interface>target_host:__INSTALL_DIR__/.__APP__/con
 [main.client.tcp_client_target_port]
 ask = "TCP client target port"
 type = "number"
-bind = "interfaces>TCP Client Interface>target_port:__INSTALL_DIR__/.__APP__/config"
+bind = "interfaces>TCP_Client_Interface>target_port:__INSTALL_DIR__/.__APP__/config"
 
