@@ -24,6 +24,12 @@ type = "string"
 bind = "interfaces>Backbone_Listener>listen_on:__INSTALL_DIR__/.__APP__/config"
 default = "0.0.0.0"
 
+[main.server.port]
+ask = "Backbone port"
+type = "number"
+readonly = true
+bind = "interfaces>Backbone_Listener>port:__INSTALL_DIR__/.__APP__/config"
+
 [main.server.tcp_server_enabled]
 ask = "Use TCP interface"
 type = "boolean"
@@ -34,6 +40,12 @@ ask = "TCP listen on"
 type = "string"
 bind = "interfaces>TCP_Server_Interface>listen_ip:__INSTALL_DIR__/.__APP__/config"
 default = "0.0.0.0"
+
+[main.server.port]
+ask = "TCP port"
+type = "number"
+readonly = true
+bind = "interfaces>TCP_Server_Interface>listen_port:__INSTALL_DIR__/.__APP__/config"
 
 [main.client]
 name = "Use as client"
