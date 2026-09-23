@@ -50,7 +50,7 @@ bind = "TCP_Server_Interface>listen_port:__INSTALL_DIR__/.__APP__/config"
 [main.server.open_close_ports]
 type = "display_text"
 readonly = true
-bind = null
+bind = "null"
 
 [main.client]
 name = "Use as client"
