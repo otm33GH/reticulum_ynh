@@ -86,10 +86,7 @@ ram.runtime = "50M"
     
     [resources.ports]
     backbone.default = 4242
-    backbone.exposed = "Both"
-    tcp.default = 4243
-    tcp.exposed = "Both"
-    
+    tcp.default = 4243   
     
     [resources.apt]
     packages = "build-essential python3-venv"
