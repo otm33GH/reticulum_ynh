@@ -26,8 +26,6 @@ bind = "interfaces>Backbone Listener>listen_on:__INSTALL_DIR__/.__APP__/config"
 [main.server.tcp_server_enabled]
 ask = "Use TCP interface"
 type = "boolean"
-true = "Yes"
-false = "No"
 bind = "interfaces>TCP Server Interface>enabled:__INSTALL_DIR__/.__APP__/config"
 
 [main.server.tcp_listen_on]
