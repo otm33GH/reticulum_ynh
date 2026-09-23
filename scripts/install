@@ -38,7 +38,7 @@ yunohost firewall allow TCP "$port"
 
 ynh_systemctl --service="$app" --action="restart"
 
-    identity=$(rnsh -p 2>&1 | grep '^Identity')
+    identity=$(ynh_exec_as_app rnsh -p 2>&1 | grep '^Identity')
 
 
 
