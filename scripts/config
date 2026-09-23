@@ -22,7 +22,11 @@ run__open_close_ports() {
     fi
 }
 
-  
+ynh_app_config_apply() {
+    _ynh_app_config_apply
+    run__open_close_ports
+}
+
 #=================================================
 
 ynh_app_config_run $1
