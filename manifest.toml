@@ -40,16 +40,14 @@ ram.runtime = "50M"
     [install.backbone_listen_enabled]
     ask.en = "Use as backbone listener"
     type = "boolean"
-    true = "Yes"
-    false = "No"
+
     [install.backbone_listen_on]
     ask.en = "Listen on"
     type = "string"
     [install.backbone_remote_enabled]
     ask.en = "Use as backbone client"
     type = "boolean"
-    true = "Yes"
-    false = "No"
+
     [install.backbone_remote_target]
     ask.en = "Remote target"
     type = "string"
@@ -57,16 +55,14 @@ ram.runtime = "50M"
     [install.tcp_server_enabled]
     ask.en = "Use as TCP server"
     type = "boolean"
-    true = "Yes"
-    false = "No"
+
     [install.tcp_listen_on]
     ask.en = "Listen on"
     type = "string"
     [install.tcp_client_enabled]
     ask.en = "Use as TCP client"
     type = "boolean"
-    true = "Yes"
-    false = "No"
+
     [install.tcp_client_target_host]
     ask.en = "Target host"
     type = "string"
@@ -75,7 +71,9 @@ ram.runtime = "50M"
     [resources.system_user]
 
     [resources.install_dir]
+    
     [resources.ports]
     port.default = 4242
+    
     [resources.apt]
     packages = "build-essential"
