@@ -83,6 +83,7 @@ ram.runtime = "50M"
     [resources.system_user]
 
     [resources.install_dir]
+    subdirs = [".reticulum"]
     
     [resources.ports]
     port.default = 4242
