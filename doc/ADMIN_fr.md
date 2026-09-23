@@ -1,1 +1,1 @@
-Identity = `__IDENTITY__`
+`__IDENTITY__`
