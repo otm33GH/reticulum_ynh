@@ -49,12 +49,14 @@ ask = "Backbone remote target"
 type = "string"
 bind = "interfaces>Backbone_Remote>remote:__INSTALL_DIR__/.__APP__/config"
 optional = true
+default = "127.0.0.1"
 
 [main.client.backbone_remote_target_port]
 ask = "Backbone remote target port"
 type = "number"
 bind = "interfaces>Backbone_Remote>target_port:__INSTALL_DIR__/.__APP__/config"
 optional = true
+default = "4242"
 
 [main.client.tcp_client_enabled]
 ask = "Use TCP interface for client"
@@ -67,10 +69,12 @@ ask = "TCP listen on"
 type = "string"
 bind = "interfaces>TCP_Client_Interface>target_host:__INSTALL_DIR__/.__APP__/config"
 optional = true
+default = "127.0.0.1"
 
 [main.client.tcp_client_target_port]
 ask = "TCP client target port"
 type = "number"
 bind = "interfaces>TCP_Client_Interface>target_port:__INSTALL_DIR__/.__APP__/config"
 optional = true
+default = "4242"
 
