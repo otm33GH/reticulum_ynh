@@ -41,6 +41,7 @@ yunohost firewall allow TCP "$port"
 
 pushd $install_dir
     identity=$(ynh_exec_as_app "$install_dir/venv/bin/rnsh" -p 2>&1 | grep '^Identity' || true)
+    ynh_app_setting_set --key=identity --value=$identity
 popd
 
 #=================================================
