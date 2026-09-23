@@ -21,8 +21,6 @@ ynh_config_remove_systemd
 
 ynh_config_remove_logrotate
 
-yunohost firewall disallow TCP "$port"
-
 #=================================================
 # END OF SCRIPT
 #=================================================
