@@ -1,1 +1,1 @@
-Ceci est une fausse description des fonctionalités de l'app
+The cryptography-based networking stack for building unstoppable networks with LoRa, Packet Radio, WiFi and everything in between.
