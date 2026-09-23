@@ -38,7 +38,7 @@ ynh_systemctl --service="$app" --action="start"
 yunohost firewall allow TCP "$port"
 
 pushd $install_dir
-    identity=$(ynh_exec_as_app "$install_dir/venv/bin/rnsh" -p 2>&1 | grep '^Identity')
+    identity=$(ynh_exec_as_app "$install_dir/venv/bin/rnsh" -p 2>&1 | grep '^Identity' || true)
 popd
 
 #=================================================
