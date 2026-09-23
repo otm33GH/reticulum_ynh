@@ -43,6 +43,13 @@ pushd $install_dir
     ynh_app_setting_set --key=identity --value=$identity
 popd
 
+if [[ "$backbone_listen_enabled" == "1" ]]; then
+    yunohost firewall allow Both $backbone_port
+fi
+if [[ "$tcp_server_enabled" == "1" ]]; then
+    yunohost firewall allow TCP $tcp_port
+fi
+
 #=================================================
 # END OF SCRIPT
 #=================================================
