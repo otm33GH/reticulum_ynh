@@ -31,7 +31,7 @@ bind = "interfaces>TCP Server Interface>enabled:__INSTALL_DIR__/.__APP__/config"
 [main.server.tcp_listen_on]
 ask = "TCP listen on"
 type = "string"
-bind = "interfaces>Backbone Listener>listen_ip:__INSTALL_DIR__/.__APP__/config"
+bind = "interfaces>TCP Server Interface>listen_ip:__INSTALL_DIR__/.__APP__/config"
 
 
 [main.client]
