@@ -10,15 +10,15 @@ ynh_abort_if_errors
 
 run__open_close_ports() {
     if [[ "$backbone_listen_enabled" == "1" ]]; then
-        yunohost firewall allow Both "$backbone_port"
+        yunohost firewall allow Both "$port_backbone"
     else
-        yunohost firewall disallow Both "$backbone_port"
+        yunohost firewall disallow Both "$port_backbone"
     fi
 
     if [[ "$tcp_server_enabled" == "1" ]]; then
-        yunohost firewall allow TCP "$tcp_port"
+        yunohost firewall allow TCP "$port_tcp"
     else
-        yunohost firewall disallow TCP "$tcp_port"
+        yunohost firewall disallow TCP "$port_tcp"
     fi
 }
 
