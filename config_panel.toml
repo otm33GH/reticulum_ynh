@@ -101,4 +101,9 @@ help.en = "NB: The RNSH service is stopped after an upgrade, restore, or URL cha
 type = "boolean"
 bind = "null"
 
+[main.rnsh.allowed_hosts]
+ask = "Add the hosts identities"
+type = "text"
+bind = "__INSTALL_DIR__/.rnsh/allowed_identities"
+
 
