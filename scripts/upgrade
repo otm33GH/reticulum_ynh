@@ -30,9 +30,9 @@ popd
 
 
 ynh_config_add_systemd
-
-
 yunohost service add "$app" --description="Reticulum" --log="/var/log/$app/$app.log"
+
+ynh_config_add_systemd --service="$app-rnsh" --template="rnsh.service"
 
 ynh_config_add_logrotate
 
