@@ -48,25 +48,3 @@ ynh_systemctl --service="$app" --action="start"
 #=================================================
 
 ynh_script_progression "Installation of $app completed"
-#=================================================
-# REAPPLY SYSTEM CONFIGURATION
-#=================================================
-
-
-ynh_config_add_systemd
-
-yunohost service add "$app" --description="Reticulum" --log="/var/log/$app/$app.log"
-
-
-#=================================================
-# START SYSTEMD SERVICE
-#=================================================
-ynh_script_progression "Starting $app's systemd service..."
-
-ynh_systemctl --service="$app" --action="start"
-
-#=================================================
-# END OF SCRIPT
-#=================================================
-
-ynh_script_progression "Upgrade of $app completed"
