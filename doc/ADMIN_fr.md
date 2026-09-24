@@ -1,1 +1,5 @@
-`__IDENTITY__`
+### GLOBAL ID  
+`__IDENTITY__`  
+### RNSH SETTINGS  
+`__RNSH_IDENTITY__`  
+`__RNSH_LISTENING__`  
