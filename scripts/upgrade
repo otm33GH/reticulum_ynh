@@ -6,7 +6,8 @@
 
 source /usr/share/yunohost/helpers
 
-#
+ynh_app_setting_set --app=$app --key=rnsh_enable --value=false 
+
 #=================================================
 # STOP SYSTEMD SERVICE
 #=================================================
