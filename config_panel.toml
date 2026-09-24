@@ -102,7 +102,7 @@ type = "boolean"
 bind = "null"
 
 [main.rnsh.allowed_hosts]
-ask = "Add the hosts identities"
+ask = "Add the allowed identities"
 type = "text"
 bind = "__INSTALL_DIR__/.rnsh/allowed_identities"
 
