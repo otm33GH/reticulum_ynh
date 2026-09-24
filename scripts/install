@@ -47,7 +47,7 @@ pushd $install_dir
     ynh_app_setting_set --key=rnsh_identity --value=$rnsh_identity
     rnsh_listening=$(ynh_exec_as_app "$install_dir/venv/bin/rnsh" -p -l 2>&1 | grep '^Listening on' || true)
     ynh_app_setting_set --key=rnsh_listening --value=$rnsh_listening
-    yhn_exec_as_app touch "$install_dir/.rnsh/allowed_identities"
+    ynh_exec_as_app touch "$install_dir/.rnsh/allowed_identities"
 popd
 
 if [[ "$backbone_listen_enabled" == "1" ]]; then
