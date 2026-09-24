@@ -162,7 +162,7 @@
       type = BackboneInterface
       enabled = {{ backbone_listen_enabled | default("No", true) }}
       listen_on = {{ backbone_listen_on | default("0.0.0.0", true) }}
-      port = {{ backbone_port }}
+      port = {{ port_backbone }}
       
     [[Backbone_Remote]]
       type = BackboneInterface
@@ -176,7 +176,7 @@
       type = TCPServerInterface
       enabled = {{ tcp_server_enabled | default("No", true) }}
       listen_ip = {{ tcp_listen_on | default("0.0.0.0", true) }}
-      listen_port = {{ tcp_port }}
+      listen_port = {{ port_tcp }}
 
   # TCP Client
   
