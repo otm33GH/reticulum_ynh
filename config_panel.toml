@@ -90,5 +90,15 @@ bind = "TCP_Client_Interface>target_port:__INSTALL_DIR__/.__APP__/config"
 optional = true
 default = "4242"
 
+[main.rnsh]
+name.en = "RNSH access"
+name.fr = "Accès SFTP"
+[main.rnsh.rnsh_enable]
+ask.fr = "Activer le service RNSH"
+ask.en = "Enable RNSH service"
+help.fr = "NB: Le service RNSH est arrêté après une mise à jour, une restauration ou un changement d'URL de l'application."
+help.en = "NB: The RNSH service is stopped after an upgrade, restore, or URL change."
+type = "boolean"
+bind = "null"
 
 
