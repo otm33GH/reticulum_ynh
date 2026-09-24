@@ -44,10 +44,10 @@ pushd $install_dir
 popd
 
 if [[ "$backbone_listen_enabled" == "1" ]]; then
-    yunohost firewall allow Both $backbone_port
+    yunohost firewall allow Both $port_backbone
 fi
 if [[ "$tcp_server_enabled" == "1" ]]; then
-    yunohost firewall allow TCP $tcp_port
+    yunohost firewall allow TCP $port_tcp
 fi
 
 #=================================================
