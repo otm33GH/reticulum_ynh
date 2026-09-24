@@ -23,6 +23,8 @@ ynh_script_progression "Restoring system configurations related to $app..."
 ynh_restore "/etc/systemd/system/$app.service"
 systemctl enable "$app.service" --quiet
 
+ynh_restore "/etc/systemd/system/$app-rnsh.service"
+
 yunohost service add "$app" --description="Reticulum" --log="/var/log/$app/$app.log"
 
 #=================================================
