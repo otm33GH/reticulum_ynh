@@ -7,6 +7,9 @@
 source /usr/share/yunohost/helpers
 ynh_abort_if_errors
 
+#=================================================
+# OPEN / CLOSE PORTS
+#=================================================
 
 run__open_close_ports() {
     if [[ "$backbone_listen_enabled" == "1" ]]; then
@@ -19,6 +22,28 @@ run__open_close_ports() {
         yunohost firewall allow TCP "$port_tcp"
     else
         yunohost firewall disallow TCP "$port_tcp"
+    fi
+}
+
+
+#=================================================
+# START / STOP RNSH
+#=================================================
+
+get__rnsh_enable() {
+    if systemctl is-active --quiet "$app-rnsh"; then
+        echo "true"
+    else
+        echo "false"
+    fi
+}
+set__rnsh_enable() {
+    if [ "$rnsh_enable" == "1" ]; then
+        ynh_systemctl --service="$app-rnsh" --action="start"
+        ynh_app_setting_set --key="rnsh_enable" --value=true
+    else
+        ynh_systemctl --service="$app-rnsh" --action="stop"
+        ynh_app_setting_set --key="rnsh_enable" --value=false
     fi
 }
 
