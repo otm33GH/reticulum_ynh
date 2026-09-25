@@ -49,8 +49,8 @@
   # possible, by using the following option:
   
 {% if tcp_shared_instance == '1' %}
-  shared_instance_port = 37428
-  instance_control_port = 37429
+  shared_instance_port = {{ port_shared_instance }}
+  instance_control_port = {{ port_instance_control }}
   shared_instance_type = tcp
   rpc_key = {{ rpc_key }}
 {% else %}
