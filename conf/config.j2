@@ -44,15 +44,16 @@
   # is the case, you can isolate different instances by
   # specifying a unique set of ports for each:
   
-  # shared_instance_port = 37428
-  # instance_control_port = 37429
+  {{ tcp_shared_instance }} shared_instance_port = 37428
+  {{ tcp_shared_instance }} instance_control_port = 37429
   
   
   # If you want to explicitly use TCP for shared instance
   # communication, instead of domain sockets, this is also
   # possible, by using the following option:
   
-  # shared_instance_type = tcp
+  {{ tcp_shared_instance }} shared_instance_type = tcp
+  {{ tcp_shared_instance }} rpc_key = {{ rpc_key }}
   
   
   # You can configure whether Reticulum should discover
