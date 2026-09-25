@@ -9,6 +9,7 @@ source /usr/share/yunohost/helpers
 ynh_app_setting_set --app=$app --key=rnsh_enable --value=false 
 hostname=$(hostname)
 rpc_key=$(ynh_string_random --length=32)
+ynh_app_setting_set --app=$app --key=rpc_key --value=$rpc_key 
 
 #=================================================
 # INSTALLATION
