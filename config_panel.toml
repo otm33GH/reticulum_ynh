@@ -115,5 +115,4 @@ help = "Some platforms don't support domain sockets. You can use instead CP for 
 ask.fr = "Activer TCP shared instance"
 ask.en = "Enable TCP shared instance"
 type = "boolean"
-yes = ""
-no = "#"
+
