@@ -11,7 +11,7 @@ hostname=$(hostname)
 rpc_key=$(python3 -c "import secrets; print(secrets.token_hex(32))")
 ynh_app_setting_set --app=$app --key=rpc_key --value=$rpc_key
 
-tcp_shared_instance=false
+tcp_shared_instance=#
 ynh_app_setting_set --app=$app --key=tcp_shared_instance --value=$tcp_shared_instance
 
 #=================================================
