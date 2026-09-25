@@ -78,6 +78,11 @@ ram.runtime = "50M"
     ask.en = "Target host"
     type = "string"
     optional = true
+
+    [install.tcp_shared_instance]
+    ask.en = "Enable TCP shared instance"
+    type = "boolean"
+    default = false
         
 [resources]
     [resources.system_user]
@@ -87,6 +92,8 @@ ram.runtime = "50M"
     [resources.ports]
     backbone.default = 4242
     tcp.default = 4243   
+    shared_instance.default = 37428
+    instance_control.default = 37429
     
     [resources.apt]
     packages = "build-essential python3-venv"
