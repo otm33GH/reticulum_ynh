@@ -106,13 +106,3 @@ ask = "Add the allowed identities"
 type = "text"
 bind = "__INSTALL_DIR__/.rnsh/allowed_identities"
 
-
-[main.tcp_shared]
-name.en = "Use TCP for shared instance"
-name.fr = "Use TCP for shared instance"
-help = "Some platforms don't support domain sockets. You can use instead CP for shared instance."
-[main.tcp_shared.tcp_shared_instance]
-ask.fr = "Activer TCP shared instance"
-ask.en = "Enable TCP shared instance"
-type = "boolean"
-
