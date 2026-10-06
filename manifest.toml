@@ -81,6 +81,13 @@ ram.runtime = "50M"
     type = "string"
     optional = true
 
+    [install.backbone_remote_target_port]
+    ask.en = "Backbone remote target port"
+    ask.fr = "Port Backbone du serveur cible"
+    type = "number"
+    optional = true
+    default = "4242"
+
     [install.tcp_client_enabled]
     ask.en = "Use as TCP client"
     ask.fr = "Utiliser comme client TCP"
@@ -92,6 +99,13 @@ ram.runtime = "50M"
     ask.fr = "Serveur TCP distant"
     type = "string"
     optional = true
+
+    [install.tcp_client_target_port]
+    ask.en = "TCP remote target port"
+    ask.fr = "Port TCP du serveur cible"
+    type = "number"
+    optional = true
+    default = "4243"
 
     [install.tcp_shared_instance]
     ask.en = "Enable TCP shared instance"
