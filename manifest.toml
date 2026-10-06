@@ -85,7 +85,7 @@ ram.runtime = "50M"
 
     [install.tcp.tcp_client_enabled]
     ask.en = "Use as TCP client"
-    ask.en = "Utiliser comme client TCP"
+    ask.fr = "Utiliser comme client TCP"
     type = "boolean"
     optional = true
 
