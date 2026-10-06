@@ -88,7 +88,7 @@ ask = "TCP client target port"
 type = "number"
 bind = "TCP_Client_Interface>target_port:__INSTALL_DIR__/.__APP__/config"
 optional = true
-default = "4242"
+default = "4243"
 
 [main.rnsh]
 name.en = "RNSH access"
