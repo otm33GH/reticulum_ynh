@@ -41,8 +41,8 @@ ram.runtime = "50M"
     default = false
     
     [install.backbone]
-    help.fr = "Connectivité backbone"
-    help.en = "Backbone connectivity"
+    ask.fr = "Connectivité backbone"
+    ask.en = "Backbone connectivity"
     type = "boolean"
     
     [install.backbone_listen_enabled]
@@ -74,8 +74,8 @@ ram.runtime = "50M"
     visible = "backbone"
 
     [install.tcp]
-    help.fr = "Connectivité TCP"
-    help.en = "TCP connectivity"
+    ask.fr = "Connectivité TCP"
+    ask.en = "TCP connectivity"
     type = "boolean"
     
     [install.tcp_server_enabled]
