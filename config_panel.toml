@@ -9,7 +9,7 @@ services = ["__APP__"]
 name.en = "Use this node as server"
 
 [main.server.enable_transport]
-ask = "Use as server"
+ask.en = "Use as server"
 ask.fr = "Utiliser comme serveur"
 type = "boolean"
 bind = "reticulum>enable_transport:__INSTALL_DIR__/.__APP__/config"
@@ -28,8 +28,8 @@ bind = "Backbone_Listener>listen_on:__INSTALL_DIR__/.__APP__/config"
 default = "0.0.0.0"
 
 [main.server.backbone_port]
-ask = "Backbone port"
-ask = "port backbone"
+ask.en = "Backbone port"
+ask.fr = "port backbone"
 type = "number"
 readonly = true
 bind = "Backbone_Listener>port:__INSTALL_DIR__/.__APP__/config"
@@ -48,7 +48,7 @@ bind = "TCP_Server_Interface>listen_ip:__INSTALL_DIR__/.__APP__/config"
 default = "0.0.0.0"
 
 [main.server.tcp_port]
-ask = "TCP port"
+ask.en = "TCP port"
 ask.fr = "Port TCP"
 type = "number"
 readonly = true
@@ -58,14 +58,14 @@ bind = "TCP_Server_Interface>listen_port:__INSTALL_DIR__/.__APP__/config"
 name = "Use as client"
 
 [main.client.backbone_remote_enabled]
-ask = "Enable backbone client interface"
+ask.en = "Enable backbone client interface"
 ask.fr = "Activer l'interface client backbone"
 type = "boolean"
 bind = "Backbone_Remote>enabled:__INSTALL_DIR__/.__APP__/config"
 optional = true
 
 [main.client.backbone_remote_target]
-ask = "Backbone remote target"
+ask.en = "Backbone remote target"
 ask.fr = "Serveur cible backbone"
 type = "string"
 bind = "Backbone_Remote>remote:__INSTALL_DIR__/.__APP__/config"
@@ -73,7 +73,7 @@ optional = true
 default = "127.0.0.1"
 
 [main.client.backbone_remote_target_port]
-ask = "Backbone remote target port"
+ask.en = "Backbone remote target port"
 ask.fr = "Port d'écoute du serveur cible backbone"
 type = "number"
 bind = "Backbone_Remote>target_port:__INSTALL_DIR__/.__APP__/config"
@@ -81,14 +81,14 @@ optional = true
 default = "4242"
 
 [main.client.tcp_client_enabled]
-ask = "Enable TCP client interface"
+ask.en = "Enable TCP client interface"
 ask.fr = "Activer l'interface client TCP"
 type = "boolean"
 bind = "TCP_Client_Interface>enabled:__INSTALL_DIR__/.__APP__/config"
 optional = true
 
 [main.client.tcp_client_target_host]
-ask = "TCP target host"
+ask.en = "TCP target host"
 ask.fr = "Serveur distant"
 type = "string"
 bind = "TCP_Client_Interface>target_host:__INSTALL_DIR__/.__APP__/config"
@@ -96,7 +96,7 @@ optional = true
 default = "127.0.0.1"
 
 [main.client.tcp_client_target_port]
-ask = "TCP client target port"
+ask.en = "TCP client target port"
 ask.fr = "Port d'écoute du serveur distant"
 type = "number"
 bind = "TCP_Client_Interface>target_port:__INSTALL_DIR__/.__APP__/config"
@@ -115,7 +115,8 @@ type = "boolean"
 bind = "null"
 
 [main.rnsh.allowed_hosts]
-ask = "Add the allowed identities"
+ask.en = "Add the allowed identities"
+ask.fr = "Ajouter les identités autorisées"
 type = "text"
 bind = "__INSTALL_DIR__/.rnsh/allowed_identities"
 
