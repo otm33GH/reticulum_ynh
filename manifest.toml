@@ -48,7 +48,7 @@ ram.runtime = "50M"
     visible = "enable_transport"
 
     [install.backbone_listen_on]
-    ask.en = "Listen on"
+    ask.en = "Listen on :"
     ask.fr = "Adresse d'écoute"
     type = "string"
     optional = true
@@ -72,8 +72,8 @@ ram.runtime = "50M"
     default = "127.0.0.1"
         
     [install.backbone_remote_enabled]
-    ask.en = "Use this instance as backbone client"
-    ask.fr = "Utiliser cette instance comme client backbone"
+    ask.en = "Enable backbone client interface"
+    ask.fr = "Activer l'interface client backbone"
     type = "boolean"
     optional = true
     
@@ -85,7 +85,7 @@ ram.runtime = "50M"
 
     [install.backbone_remote_target_port]
     ask.en = "Backbone remote target port"
-    ask.fr = "Port Backbone du serveur cible"
+    ask.fr = "Port backbone du serveur cible"
     type = "number"
     optional = true
     default = "4242"
@@ -93,8 +93,8 @@ ram.runtime = "50M"
     max = 65535
     
     [install.tcp_client_enabled]
-    ask.en = "Use as TCP client"
-    ask.fr = "Utiliser comme client TCP"
+    ask.en = "Enable TCP client interface"
+    ask.fr = "Activer l'interface client TCP"
     type = "boolean"
     optional = true
 
