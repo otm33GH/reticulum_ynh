@@ -41,8 +41,8 @@ ram.runtime = "50M"
     default = false
     
     [install.backbone]
-    name.fr = "Connectivité backbone"
-    name.en = "Backbone connectivity"
+    help.fr = "Connectivité backbone"
+    help.en = "Backbone connectivity"
     
     [install.backbone.backbone_listen_enabled]
     ask.en = "Use as backbone listener"
@@ -69,8 +69,9 @@ ram.runtime = "50M"
     optional = true
 
     [install.tcp]
-    name.fr = "Connectivité TCP"
-    name.en = "TCP connectivity"
+    help.fr = "Connectivité TCP"
+    help.en = "TCP connectivity"
+    
     [install.tcp.tcp_server_enabled]
     ask.en = "Use as TCP server"
     ask.fr = "Utiliser cettte instance comme serveur TCP"
