@@ -10,39 +10,46 @@ name.en = "Use this node as server"
 
 [main.server.enable_transport]
 ask = "Use as server"
+ask.fr = "Utiliser comme serveur"
 type = "boolean"
 bind = "reticulum>enable_transport:__INSTALL_DIR__/.__APP__/config"
 
 [main.server.backbone_listen_enabled]
-ask = "Use backbone interface"
+    ask.en = "Enable backbone server interface"
+    ask.fr = "Activer l'interface serveur backbone"
 type = "boolean"
 bind = "Backbone_Listener>enabled:__INSTALL_DIR__/.__APP__/config"
 
 [main.server.backbone_listen_on]
-ask = "Backbone listen on"
+    ask.en = "Listen on"
+    ask.fr = "Adresse d'écoute"
 type = "string"
 bind = "Backbone_Listener>listen_on:__INSTALL_DIR__/.__APP__/config"
 default = "0.0.0.0"
 
 [main.server.backbone_port]
 ask = "Backbone port"
+ask = "port backbone"
 type = "number"
 readonly = true
 bind = "Backbone_Listener>port:__INSTALL_DIR__/.__APP__/config"
 
 [main.server.tcp_server_enabled]
-ask = "Use TCP interface"
+    ask.en = "Enable TCP server interface"
+    ask.fr = "Activer l'interface serveur TCP"
 type = "boolean"
 bind = "TCP_Server_Interface>enabled:__INSTALL_DIR__/.__APP__/config"
 
 [main.server.tcp_listen_on]
-ask = "TCP listen on"
+    ask.en = "Listen on port"
+    ask.fr = "Adresse d'écoute"
 type = "string"
 bind = "TCP_Server_Interface>listen_ip:__INSTALL_DIR__/.__APP__/config"
 default = "0.0.0.0"
 
 [main.server.tcp_port]
 ask = "TCP port"
+ask.fr = "Port TCP"
 type = "number"
 readonly = true
 bind = "TCP_Server_Interface>listen_port:__INSTALL_DIR__/.__APP__/config"
@@ -51,13 +58,15 @@ bind = "TCP_Server_Interface>listen_port:__INSTALL_DIR__/.__APP__/config"
 name = "Use as client"
 
 [main.client.backbone_remote_enabled]
-ask = "Use backbone interface for client"
+ask = "Enable backbone client interface"
+ask.fr = "Activer l'interface client backbone"
 type = "boolean"
 bind = "Backbone_Remote>enabled:__INSTALL_DIR__/.__APP__/config"
 optional = true
 
 [main.client.backbone_remote_target]
 ask = "Backbone remote target"
+ask.fr = "Serveur cible backbone"
 type = "string"
 bind = "Backbone_Remote>remote:__INSTALL_DIR__/.__APP__/config"
 optional = true
@@ -65,19 +74,22 @@ default = "127.0.0.1"
 
 [main.client.backbone_remote_target_port]
 ask = "Backbone remote target port"
+ask.fr = "Port d'écoute du serveur cible backbone"
 type = "number"
 bind = "Backbone_Remote>target_port:__INSTALL_DIR__/.__APP__/config"
 optional = true
 default = "4242"
 
 [main.client.tcp_client_enabled]
-ask = "Use TCP interface for client"
+ask = "Enable TCP client interface"
+ask.fr = "Activer l'interface client TCP"
 type = "boolean"
 bind = "TCP_Client_Interface>enabled:__INSTALL_DIR__/.__APP__/config"
 optional = true
 
 [main.client.tcp_client_target_host]
-ask = "TCP listen on"
+ask = "TCP target host"
+ask.fr = "Serveur distant"
 type = "string"
 bind = "TCP_Client_Interface>target_host:__INSTALL_DIR__/.__APP__/config"
 optional = true
@@ -85,6 +97,7 @@ default = "127.0.0.1"
 
 [main.client.tcp_client_target_port]
 ask = "TCP client target port"
+ask.fr = "Port d'écoute du serveur distant"
 type = "number"
 bind = "TCP_Client_Interface>target_port:__INSTALL_DIR__/.__APP__/config"
 optional = true
