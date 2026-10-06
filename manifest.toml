@@ -50,9 +50,10 @@ ram.runtime = "50M"
     [install.backbone_listen_on]
     ask.en = "Listen on port"
     ask.fr = "Port d'écoute backbone"
-    type = "string"
+    type = "number"
     optional = true
     visible = "enable_transport"
+    default = 4242
 
     [install.tcp_server_enabled]
     ask.en = "Use as TCP server"
@@ -64,9 +65,10 @@ ram.runtime = "50M"
     [install.tcp_listen_on]
     ask.en = "Listen on port"
     ask.fr = "Port d'écoute du serveur"
-    type = "string"
+    type = "number"
     optional = true
     visible = "enable_transport"
+    default = 4243
     
     
     [install.backbone_remote_enabled]
