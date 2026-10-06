@@ -91,7 +91,7 @@ ram.runtime = "50M"
 
     [install.tcp.tcp_client_target_host]
     ask.en = "Target host"
-    ask.en = "Serveur TCP distant"
+    ask.fr = "Serveur TCP distant"
     type = "string"
     optional = true
 
