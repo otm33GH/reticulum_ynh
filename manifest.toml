@@ -41,15 +41,15 @@ ram.runtime = "50M"
     default = false
     
     [install.backbone_listen_enabled]
-    ask.en = "Use as backbone listener"
-    ask.fr = "Utiliser la connectivité backbone sur ce serveur"
+    ask.en = "Enable backbone server interface"
+    ask.fr = "Activer l'interface serveur backbone"
     type = "boolean"
     optional = true
     visible = "enable_transport"
 
     [install.backbone_listen_on]
     ask.en = "Listen on"
-    ask.fr = "Interface d'écoute"
+    ask.fr = "Adresse d'écoute"
     type = "string"
     optional = true
     visible = "enable_transport"
@@ -57,15 +57,15 @@ ram.runtime = "50M"
 
 
     [install.tcp_server_enabled]
-    ask.en = "Use as TCP server"
-    ask.fr = "Utiliser cettte instance comme serveur TCP"
+    ask.en = "Enable TCP server interface"
+    ask.fr = "Activer l'interface serveur TCP"
     type = "boolean"
     optional = true
     visible = "enable_transport"
 
     [install.tcp_listen_on]
-    ask.en = "Listen on port"
-    ask.fr = "Interface d'écoute"
+    ask.en = "Listen on :"
+    ask.fr = "Adresse d'écoute"
     type = "string"
     optional = true
     visible = "enable_transport"
