@@ -40,71 +40,58 @@ ram.runtime = "50M"
     type = "boolean"
     default = false
     
-    [install.backbone]
-    ask.fr = "Connectivité backbone"
-    ask.en = "Backbone connectivity"
-    type = "boolean"
-    
     [install.backbone_listen_enabled]
     ask.en = "Use as backbone listener"
-    ask.fr = "Utiliser la connectivité backbone"
+    ask.fr = "Utiliser la connectivité backbone sur ce serveur"
     type = "boolean"
     optional = true
-    visible = "backbone"
+    visible = "enable_transport"
 
     [install.backbone_listen_on]
     ask.en = "Listen on port"
     ask.fr = "Port d'écoute backbone"
     type = "string"
     optional = true
-    visible = "backbone"
-    
-    [install.backbone_remote_enabled]
-    ask.en = "Use this instance as backbone client"
-    ask.fr = "Utiliser cette instance comme client backbone"
-    type = "boolean"
-    optional = true
-    visible = "backbone"
-    
-    [install.backbone_remote_target]
-    ask.en = "Remote target (backbone server)"
-    ask.fr = "Serveur backbone distant"
-    type = "string"
-    optional = true
-    visible = "backbone"
+    visible = "enable_transport"
 
-    [install.tcp]
-    ask.fr = "Connectivité TCP"
-    ask.en = "TCP connectivity"
-    type = "boolean"
-    
     [install.tcp_server_enabled]
     ask.en = "Use as TCP server"
     ask.fr = "Utiliser cettte instance comme serveur TCP"
     type = "boolean"
     optional = true
-    visible = "tcp"
+    visible = "enable_transport"
 
     [install.tcp_listen_on]
     ask.en = "Listen on port"
     ask.fr = "Port d'écoute du serveur"
     type = "string"
     optional = true
-    visible = "tcp"
+    visible = "enable_transport"
+    
+    
+    [install.backbone_remote_enabled]
+    ask.en = "Use this instance as backbone client"
+    ask.fr = "Utiliser cette instance comme client backbone"
+    type = "boolean"
+    optional = true
+    
+    [install.backbone_remote_target]
+    ask.en = "Remote target (backbone server)"
+    ask.fr = "Serveur backbone distant"
+    type = "string"
+    optional = true
 
     [install.tcp_client_enabled]
     ask.en = "Use as TCP client"
     ask.fr = "Utiliser comme client TCP"
     type = "boolean"
     optional = true
-    visible = "tcp"
 
     [install.tcp_client_target_host]
     ask.en = "Target host"
     ask.fr = "Serveur TCP distant"
     type = "string"
     optional = true
-    visible = "backbone"
 
     [install.tcp_shared_instance]
     ask.en = "Enable TCP shared instance"
