@@ -27,6 +27,7 @@ if [ "$lxmf" == "1" ]; then
     mkdir -p "$install_dir/.lxmf"
     chown "$app:$app" "$install_dir/.lxmf"
     ynh_config_add --jinja --template=lxmf.j2 --destination="$install_dir/.lxmf/config"
+fi
 popd
 
 #=================================================
