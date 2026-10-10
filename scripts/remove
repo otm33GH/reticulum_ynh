@@ -19,6 +19,13 @@ if ynh_hide_warnings yunohost service status "$app" >/dev/null; then
 fi
 ynh_config_remove_systemd
 
+if [ "$lxmf" == "1" ]; then
+    if ynh_hide_warnings yunohost service status "$app-lxmf" >/dev/null; then
+        yunohost service remove "$app-lxmf"
+    fi
+ynh_config_remove_systemd "$app-lxmf"
+fi
+
 ynh_systemctl --service="$app-rnsh" --action="stop" --log_path="systemd"
 ynh_config_remove_systemd "$app-rnsh"
 
