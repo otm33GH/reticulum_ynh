@@ -22,6 +22,11 @@ pushd $install_dir
     mkdir -p "$install_dir/.reticulum"
     chown "$app:$app" "$install_dir/.reticulum"
     ynh_config_add --jinja --template=config.j2 --destination="$install_dir/.reticulum/config"
+if [ "$lxmf" == "1" ]; then
+    ynh_exec_as_app "$install_dir/venv/bin/pip" install lxmf==$(ynh_app_upstream_version)
+    mkdir -p "$install_dir/.lxmf"
+    chown "$app:$app" "$install_dir/.lxmf"
+    ynh_config_add --jinja --template=lxmf.j2 --destination="$install_dir/.lxmf/config"
 popd
 
 #=================================================
