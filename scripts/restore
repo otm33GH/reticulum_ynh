@@ -23,9 +23,16 @@ ynh_script_progression "Restoring system configurations related to $app..."
 ynh_restore "/etc/systemd/system/$app.service"
 systemctl enable "$app.service" --quiet
 
+yunohost service add "$app" --description="Reticulum" --log="/var/log/$app/$app.log"
+
+if [ "$lxmf" == "1" ]; then
+ynh_restore "/etc/systemd/system/$app-lxmf.service"
+systemctl enable "$app-lxmf.service" --quiet
+yunohost service add "$app" --description="Reticulum LXMF Daemon" --log="/var/log/$app/$app.log"
+fi
+
 ynh_restore "/etc/systemd/system/$app-rnsh.service"
 
-yunohost service add "$app" --description="Reticulum" --log="/var/log/$app/$app.log"
 
 mkdir -p "/var/log/"$app""
 ynh_restore "/etc/logrotate.d/$app"
@@ -36,6 +43,9 @@ ynh_restore "/etc/logrotate.d/$app"
 ynh_script_progression "Reloading NGINX web server and $app's service..."
 
 ynh_systemctl --service="$app" --action="start"
+if [ "$lxmf" == "1" ]; then
+ynh_systemctl --service="$app-lxmf" --action="start"
+fi
 
 #=================================================
 # END OF SCRIPT
