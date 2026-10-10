@@ -1,5 +1,5 @@
 [Unit]
-Description=LXMF Daemon
+Description=Reticulum LXMF Daemon
 After=network.target
 
 [Service]
