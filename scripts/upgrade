@@ -16,6 +16,10 @@ ynh_script_progression "Stopping $app's systemd service..."
 ynh_systemctl --service="$app" --action="stop"
 ynh_systemctl --service="$app-rnsh" --action="stop" --log_path="systemd"
 
+if [ "$lxmf" == "1" ]; then
+    ynh_systemctl --service="$app-lxmf" --action="stop"
+fi
+
 #=================================================
 # UPGRADE
 #=================================================
@@ -41,6 +45,11 @@ yunohost service add "$app" --description="Reticulum" --log="/var/log/$app/$app.
 
 ynh_config_add_systemd --service="$app-rnsh" --template="rnsh.service"
 
+if [ "$lxmf" == "1" ]; then
+ynh_config_add_systemd --service="$app-lxmf" --template="lxmf.service"
+yunohost service add "$app-lxmf" --description="LXMF Daemon" --log="/var/log/$app/lxmf.log"
+fi
+
 ynh_config_add_logrotate
 
 #=================================================
@@ -49,7 +58,9 @@ ynh_config_add_logrotate
 ynh_script_progression "Starting $app's systemd service..."
 
 ynh_systemctl --service="$app" --action="start"
-
+if [ "$lxmf" == "1" ]; then
+ynh_systemctl --service="$app-lxmf" --action="start"
+fi
 #=================================================
 # END OF SCRIPT
 #=================================================
