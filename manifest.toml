@@ -120,6 +120,12 @@ ram.runtime = "50M"
     default = false
         
 [resources]
+[resources.sources.main]
+    url = "https://github.com/markqvist/Reticulum/archive/refs/tags/1.5.5.tar.gz"
+    sha256 = "1ea0b818f499d4ac65e4c177249c69a35e30207e9d8ef9391a11da5fcac30998"
+    autoupdate.strategy = "latest_github_tag"
+    prefetch = false
+    
     [resources.system_user]
 
     [resources.install_dir]
