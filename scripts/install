@@ -42,7 +42,7 @@ ynh_config_add_systemd --service="$app-rnsh" --template="rnsh.service"
 
 if [ "$lxmf" == "1" ]; then
 ynh_config_add_systemd --service="$app-lxmf" --template="lxmf.service"
-yunohost service add "$app-lxmf" --description="LXMF Daemon" --log="/var/log/$app/lxmf.log"
+yunohost service add "$app-lxmf" --description="Reticulum LXMF Daemon" --log="/var/log/$app/lxmf.log"
 fi
 
 ynh_config_add_logrotate
