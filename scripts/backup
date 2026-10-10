@@ -27,6 +27,9 @@ ynh_backup "$install_dir"
 # Backup the systemd service unit
 ynh_backup "/etc/systemd/system/$app.service"
 ynh_backup "/etc/systemd/system/$app-rnsh.service"
+if [ "$lxmf" == "1" ]; then
+ynh_backup "/etc/systemd/system/$app-lxmf.service"
+fi
 
 ynh_backup "/etc/logrotate.d/$app"
 
