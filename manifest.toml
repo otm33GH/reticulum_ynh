@@ -119,10 +119,22 @@ ram.runtime = "50M"
     type = "boolean"
     default = false
         
+    [install.lxmf]
+    ask.en = "Install LXMF"
+    ask.fr = "Installer LXMF"
+    type = "boolean"
+    default = false
+        
 [resources]
 [resources.sources.main]
     url = "https://github.com/markqvist/Reticulum/archive/refs/tags/1.5.5.tar.gz"
     sha256 = "1ea0b818f499d4ac65e4c177249c69a35e30207e9d8ef9391a11da5fcac30998"
+    autoupdate.strategy = "latest_github_tag"
+    prefetch = false
+    
+[resources.sources.lxmf]
+    url = "https://github.com/markqvist/LXMF/archive/refs/tags/1.2.0.tar.gz"
+    sha256 = "86ab3bc47fc1a3152fefbf6cc6919d4e14194851f33faadda61ca8cb5dbca3f7"
     autoupdate.strategy = "latest_github_tag"
     prefetch = false
     
