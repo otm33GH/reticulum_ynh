@@ -24,7 +24,7 @@ pushd $install_dir
   	ynh_safe_rm "$install_dir/venv"
     ynh_exec_as_app python3 -m venv "$install_dir/venv"
     ynh_hide_warnings $install_dir/venv/bin/pip install --upgrade pip
-    ynh_exec_as_app "$install_dir/venv/bin/pip" install rns==$(ynh_app_upstream_version)
+    ynh_exec_as_app "$install_dir/venv/bin/pip" install --upgrade rns==$(ynh_app_upstream_version)
 popd
 
 #=================================================
